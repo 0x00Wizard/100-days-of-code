@@ -1,19 +1,30 @@
-#If the bill was $150.00, split between 5 people, with 12% tip.
+student_scores = {
+  "Harry": 81,
+  "Ron": 78,
+  "Hermione": 99,
+  "Draco": 74,
+  "Neville": 62,
+}
+# 🚨 Don't change the code above 👆
+student_grades = {}
 
-#Each person should pay (150.00 / 5) * 1.12 = 33.6
-#Format the result to 2 decimal places = 33.60
 
-#Tip: There are 2 ways to round a number. You might have to do some Googling to solve this.💪
+for key, val in student_scores.items():
+    if val > 90:
+      student_grades[key] = "Outstanding"
 
-#Write your code below this line 👇
+    elif 80 < val <= 90:
+      student_grades[key] = "Exceeds Expectations"
+
+    elif 71 < val <= 80:
+      student_grades[key] = "Acceptable"
+
+    else:
+      student_grades[key] = "Fail"
 
 
-print("Welcome to the tip calculator!")
-total_bill = float(input("What was the total bill?: "))
-tip_amount = int(input("How much tip would you like to give? 10, 12, or 15?: "))
-num_people = int(input("How many people to split the bill?: "))
 
-tip = tip_amount / 100
-total = (total_bill + num_people) * tip
 
-print(round(total, 2))
+
+# 🚨 Don't change the code below 👇
+print(student_grades)

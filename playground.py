@@ -1,6 +1,13 @@
-name1 = "hello world!"
-name2 = "hello world!"
+# Write your code here 👇
+for i in range(1, 101):
+    if i > 2 and i % 3 == 0 and i % 5 == 0:
+        print("FizzBuzz")
 
-fullname = name1 + name2
+    elif i % 3 == 0:
+        print("Fizz")
 
-print(fullname)
+    elif i % 5 == 0:
+        print("Buzz")
+
+    else:
+        print(i)
